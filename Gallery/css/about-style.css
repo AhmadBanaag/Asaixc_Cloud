@@ -1,0 +1,114 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: 'Courier New', monospace Arial, Helvetica, sans-serif;
+  background-image: url('../assets/img/2948045-john-atkinson-grimshaw-classic-art-moon-night-painting-artwork___abstract-wallpapers.jpg');
+}
+
+.main-nav {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px 0;
+}
+.main-nav a {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+}
+
+header {
+  background-image: url('../assets/img/header4.jpg'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 10px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+  margin-top: 10px;
+}
+
+nav {
+  float: top;
+  width: 100%;
+  height: 50px; 
+  background: #ccc;
+  padding: 20px;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20%;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+article {
+  background-image: url('../assets/img/Aert-van-der-Neer-Night-Landscape-with-a-River-c.-1700.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;  
+  padding: 60px 20px; /* Reduced padding for better fit */
+  width: 100%;
+  background-color: #f1f1f1;
+}
+
+article h1{
+  display: inline-block;
+  word-spacing: 5px;
+  padding: 10px;
+  width: 100%;
+  text-align: center;
+}
+article iframe {
+  display: block;
+  margin: 30px auto; 
+  border-radius: 12px; 
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15); 
+}
+article p{
+  display: inline-block;
+  margin-top: 40px;      /* Adds space above the paragraph */
+  word-spacing: 5px;
+  font-size: 160%;
+  font-style: italic;
+  color: #f1f1f1;
+  padding: 0px;
+  width: 100%;
+  text-align: center;
+}
+
+.upper {
+   display: inline-block;
+  word-spacing: 30px;
+  padding: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}

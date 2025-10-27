@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Asaixc Gallery</title>
+        <meta charset="UTF-8">
+        <meta name="author" content="Ahmad Banaag">
+        <meta name="description" content="HTML, CSS, JavaScript, layout, extension, homepage">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+<body>
+  <audio src="audio/Dance For Me Wallis - Abel Korzeniowski  Piano Сover  Sheet Music  Tutorial.mp3" autoplay></audio>
+  <div class="upper">
+       <a href="index.html">Home</a> | <a href="about.html">About</a> | <a href="info.html">Contact</a> | <a href="test.html">TryThisOut!</a>
+  </div>    
+</nav>
+<header>
+  <h2>COPY MACHINE</h2>
+</header>
+<section>
+  <nav>
+    <ul>
+      <li>CREATIVITY</li>
+      <li>PASSION</li>
+      <li>CONSISTENCY</li>
+    </ul>
+  </nav>
+  
+  <article>
+    <div class="center-content"></div>
+    <p>Painting to be used:</p>
+    <img id="Painting" src="assets/img/848c00934bb0c1a2773e856521bfcb8f.jpg" alt="Painting" width="220" height="277">
+
+    <p>Want to copy?</p>
+    <canvas id="myCanvas" width="250" height="300"
+    style="border:1px solid #d3d3d3;">
+    </canvas>
+
+    <p><button onclick="myCanvas()">Click Here!</button></p>
+  </div>
+    <script>
+function myCanvas() {
+  var c = document.getElementById("myCanvas");
+  var ctx = c.getContext("2d");
+  var img = document.getElementById("Painting");
+  ctx.drawImage(img,0, 0, c.width, c.height);
+}
+</script>
+ </article>
+
+<footer>
+  <p>“Building not just websites, but experiences.”</p>
+</footer>
+
+</body>
+</html>
+
