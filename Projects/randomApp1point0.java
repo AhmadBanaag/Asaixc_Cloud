@@ -6,7 +6,7 @@ public class randomApp1point0 {
 		
 		JOptionPane.showMessageDialog(
 				null,
-				"Hello User!",
+				"Good Day User!",
 				"Asaixc App",
 				JOptionPane.PLAIN_MESSAGE);	
 		JOptionPane.showMessageDialog(
