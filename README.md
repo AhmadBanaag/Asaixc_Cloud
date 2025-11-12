@@ -1,4 +1,4 @@
-# 🌐 Introduction to Computing
+# 💻 Asaixc Codes
 
 Hi there! 👋  
 I'm **Ahmad Banaag**, an **18-year-old** **1st Year Bachelor of Science in Computer Science** student at the **University of Southern Mindanao**.
@@ -14,6 +14,7 @@ This collection showcases my progress in learning web development and programmin
 - **Visual Studio Code**
 - **Git & GitHub**
 - **Java**
+- **IntelliJ**
 
 ---
 
