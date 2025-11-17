@@ -1,0 +1,34 @@
+Paintings
+- Planting Rice - Fernando Amorsolo
+- Spoliarium - Juan Luna
+- La Laguna Estigia - Felix Resurreccion Hidalgo
+- First Mass at Limasawa - Botong Francisco
+- The Parisian Life - Juan Luna
+- Hymen, Oh Hymenee - Juan Luna
+
+first section is done
+
+third section but let's swap it with the second section:
+
+Vision:
+- I created this website with the purpose of reviving appreciation for classical paintings. While modern art has its own meaning and place in today’s world, nothing can truly replace the beauty, talents, and mastery of Renaissance art. Through this gallery, I hope to help people rediscover how important classical paintings are — not only as historical treasures but as timeless reflections of human emotion and creativity.
+second section
+
+what paintings should we include 1-3?
+Starry Night by Van Gough
+- As one of the creator of this website, this is one of my favorite painting of all time. From the color palette to the strokes of the brush that resembles how professional van gogh really is. His art depicts bright and colorful landscapes and objects with expressive and dynamic brushstrokes. At the time, he wasn't that famous but as his paintings lives on, his paintings inspires millions of people around the world.
+
+Spoliarium by Juan Luna
+- "Spolarium by Eraserheads"? No, this painting is one of the most known paintings around the world. Juan Luna spent eight months completing the painting on canvas. The artworks recreates a despoiling scene in a Roman circus where dead gladiators are stripped of weapons and garments.
+
+Fishermen at Sea by Joseph Mallord William Turner
+- “Fishermen at Sea” is a notable work of art created by the esteemed artist J.M.W. Turner around the year 1796.The artwork depicts a dramatic nocturnal scene, with fishermen navigating their small boats through turbulent seas under a luminous, cloud-obscured moon.
+
+About Page:
+
+Introduction:
+
+Hello! I’m Ahmad Namion Banaag, an 18-year-old first-year student at the University of Southern Mindanao, residing in Upper Baguer, Pigcawayan, North Cotabato. This website is my first fully functional project, created as part of my Introduction to Computing course.
+
+I designed this site to showcase my passion for classical paintings, which I deeply admire for their timeless beauty and cultural significance. Unlike modern art, I believe classical artworks carry a depth and craftsmanship that continue to inspire and captivate viewers across generations. Through this website, I hope to share that appreciation with others and highlight the enduring value of classical art.
+

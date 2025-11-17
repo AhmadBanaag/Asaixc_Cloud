@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Asaixc Gallery - Gallery</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="Ahmad Banaag">
+    <meta name="description" content="Museum-style gallery showcasing classical Philippine paintings">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap5/css/bootstrap.min.css">
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/gallery-styles.css">
+</head>
+<body class="gallery-page">
+    <nav>
+        <img id="logo" src="assets/img/Asaixc galler.png" alt="logo">
+        <ul class="navigation_top">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+        <a class="contact" href="contact.html"><button>Contact Me</button></a>
+    </nav>
+
+    <section class="museum-gallery">
+        <div class="gallery-container">
+            <div class="gallery-header">
+                <h1 class="gallery-title">Gallery of Historical Paintings</h1>
+                <p class="gallery-subtitle">Click one of the paintings to view details</p>
+            </div>
+            
+            <div class="artwork-grid">
+                <!-- Painting 1 -->
+                <a href="#artwork-1" class="artwork-item">
+                    <div class="artwork-frame">
+                        <img src="assets/img/Paintings/6.png" alt="Spoliarium" class="artwork-img">
+                        <div class="artwork-overlay">
+                            <h3 class="artwork-title">Spoliarium</h3>
+                            <p class="artwork-artist">Juan Luna</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Painting 2 -->
+                <a href="#artwork-2" class="artwork-item">
+                    <div class="artwork-frame">
+                        <img src="assets/img/Paintings/5.png" alt="The Parisian Life" class="artwork-img">
+                        <div class="artwork-overlay">
+                            <h3 class="artwork-title">The Parisian Life</h3>
+                            <p class="artwork-artist">Juan Luna</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Painting 3 -->
+                <a href="#artwork-3" class="artwork-item">
+                    <div class="artwork-frame">
+                        <img src="assets/img/Paintings/3.png" alt="La Laguna Estigia" class="artwork-img">
+                        <div class="artwork-overlay">
+                            <h3 class="artwork-title">La Laguna Estigia</h3>
+                            <p class="artwork-artist">Felix Resurreccion Hidalgo</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Painting 4 -->
+                <a href="#artwork-4" class="artwork-item">
+                    <div class="artwork-frame">
+                        <img src="assets/img/Paintings/2.png" alt="First Mass at Limasawa" class="artwork-img">
+                        <div class="artwork-overlay">
+                            <h3 class="artwork-title">First Mass at Limasawa</h3>
+                            <p class="artwork-artist">Botong Francisco</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Painting 5 -->
+                <a href="#artwork-5" class="artwork-item">
+                    <div class="artwork-frame">
+                        <img src="assets/img/Paintings/4.png" alt="Planting Rice" class="artwork-img">
+                        <div class="artwork-overlay">
+                            <h3 class="artwork-title">Planting Rice</h3>
+                            <p class="artwork-artist">Fernando Amorsolo</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Painting 6 -->
+                <a href="#artwork-6" class="artwork-item">
+                    <div class="artwork-frame">
+                        <img src="assets/img/Paintings/1.png" alt="Hymen, Oh Hymenee" class="artwork-img">
+                        <div class="artwork-overlay">
+                            <h3 class="artwork-title">Hymen, Oh Hymenee</h3>
+                            <p class="artwork-artist">Juan Luna</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modals -->
+    <!-- Modal 1 -->
+    <div id="artwork-1" class="modal">
+        <a href="#close" class="modal-backdrop"></a>
+        <div class="modal-container">
+            <a href="#close" class="modal-close" aria-label="Close">&times;</a>
+            <div class="modal-content">
+                <img src="assets/img/Paintings/6.png" alt="Spoliarium">
+                <div class="modal-info">
+                    <h2>Spoliarium</h2>
+                    <p>Juan Luna</p>
+                    <p class="modal-description">A monumental masterpiece portraying fallen gladiators stripped of dignity. This powerful work mirrors the struggles of a nation yearning for freedom beneath the shadows of oppression. Luna's use of dramatic chiaroscuro and emotional intensity makes this one of the most significant works in Philippine art history.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2 -->
+    <div id="artwork-2" class="modal">
+        <a href="#close" class="modal-backdrop"></a>
+        <div class="modal-container">
+            <a href="#close" class="modal-close" aria-label="Close">&times;</a>
+            <div class="modal-content">
+                <img src="assets/img/Paintings/5.png" alt="The Parisian Life">
+                <div class="modal-info">
+                    <h2>The Parisian Life</h2>
+                    <p>Juan Luna</p>
+                    <p class="modal-description">A quiet yet unsettling glimpse into modernity and alienation. Beneath its café charm lies a reflection on identity, intimacy, and the silent distance between people in a changing world. This painting captures a moment of contemplation in late 19th-century Paris, revealing Luna's masterful observation of human nature.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 3 -->
+    <div id="artwork-3" class="modal">
+        <a href="#close" class="modal-backdrop"></a>
+        <div class="modal-container">
+            <a href="#close" class="modal-close" aria-label="Close">&times;</a>
+            <div class="modal-content">
+                <img src="assets/img/Paintings/3.png" alt="La Laguna Estigia">
+                <div class="modal-info">
+                    <h2>La Laguna Estigia</h2>
+                    <p>Felix Resurreccion Hidalgo</p>
+                    <p class="modal-description">A haunting voyage across the mythic River Styx. Hidalgo captures the fragility of the soul in transition, a poetic meditation on death, redemption, and the timeless passage between worlds. The painting's ethereal atmosphere and classical composition reflect Hidalgo's profound understanding of allegory and symbolism.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 4 -->
+    <div id="artwork-4" class="modal">
+        <a href="#close" class="modal-backdrop"></a>
+        <div class="modal-container">
+            <a href="#close" class="modal-close" aria-label="Close">&times;</a>
+            <div class="modal-content">
+                <img src="assets/img/Paintings/2.png" alt="First Mass at Limasawa">
+                <div class="modal-info">
+                    <h2>First Mass at Limasawa</h2>
+                    <p>Botong Francisco</p>
+                    <p class="modal-description">A significant historical painting depicting the first Catholic mass celebrated in the Philippines. Francisco captures this pivotal moment in Philippine history with vibrant colors and dynamic composition, celebrating the arrival of Christianity while honoring the rich cultural heritage of the Filipino people.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!-- Modal 5 -->
+        <div id="artwork-5" class="modal">
+            <a href="#close" class="modal-backdrop"></a>
+            <div class="modal-container">
+                <a href="#close" class="modal-close" aria-label="Close">&times;</a>
+                <div class="modal-content">
+                    <img src="assets/img/Paintings/4.png" alt="Planting Rice">
+                    <div class="modal-info">
+                        <h2>Planting Rice</h2>
+                        <p>Fernando Amorsolo</p>
+                        <p class="modal-description">A quintessential representation of rural Filipino life, bathed in golden sunlight. Amorsolo's mastery of light and his idealization of pastoral scenes make this work a beloved icon of Philippine art. The painting celebrates the dignity of agricultural work and the beauty of the Philippine countryside.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal 6 -->    
+        <div id="artwork-6" class="modal">
+            <a href="#close" class="modal-backdrop"></a>
+            <div class="modal-container">
+                <a href="#close" class="modal-close" aria-label="Close">&times;</a>
+                <div class="modal-content">
+                    <img src="assets/img/Paintings/1.png" alt="Hymen, Oh Hymenee">
+                    <div class="modal-info">
+                        <h2>Hymen, Oh Hymenee</h2>
+                        <p>Juan Luna</p>
+                        <p class="modal-description">A poignant and enigmatic painting that captures the essence of love and the mysteries of the human heart. Luna's use of rich colors and dramatic lighting creates a sense of intimacy and mystery, inviting viewers to explore the depths of human emotion and the sacred bond of love.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <script src="bootstrap5/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,855 @@
+@font-face {
+    font-family: "Montserrat";
+    src: url(../fonts/Montserrat/Montserrat-VariableFont_wght.ttf) format('truetype');
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+
+}
+
+nav {
+    width: 100%;
+    padding: 10px 10%;
+    background: linear-gradient(
+        to bottom, 
+        rgba(139, 121, 94, 0.25) 0%,
+        rgba(101, 84, 75, 0.15) 100%
+    );
+    background-image: url(../assets/img/downloads/Aert-van-der-Neer-Night-Landscape-with-a-River-c.-1700.jpg);
+    backdrop-filter: blur(20px) saturate(180%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+nav::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, 
+        transparent 0%,
+        rgba(184, 154, 109, 0.15) 20%,
+        rgba(218, 192, 153, 0.25) 50%,
+        rgba(184, 154, 109, 0.15) 80%,
+        transparent 100%
+    );
+}
+
+li, a, #title {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    color: #f5f1e8;
+    text-decoration: none;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+#logo {
+    margin-inline-start: -10%;
+    cursor: pointer;
+    height: 20%;
+    width: 20%;
+    filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.5));
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+#logo:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.7));
+}
+
+.navigation_top {
+    list-style: none;
+}
+
+.navigation_top li {
+    display:inline-block;
+    padding: 0px 15px;
+}
+
+.navigation_top li a {
+    transition: all 0.3s ease 0s;
+    position: relative;
+    padding: 8px 20px;
+    border-radius: 4px;
+}
+
+.navigation_top li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, 
+        rgba(184, 154, 109, 0) 0%,
+        rgba(218, 192, 153, 1) 50%,
+        rgba(184, 154, 109, 0) 100%
+    );
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.navigation_top li a:hover {
+    color: #dac099;
+    text-shadow: 0 2px 8px rgba(218, 192, 153, 0.5);
+    background: rgba(218, 192, 153, 0.1);
+}
+
+.navigation_top li a:hover::after {
+    width: 80%;
+}
+
+button {
+    padding: 10px 32px;
+    background: linear-gradient(135deg, #dac099 0%, #b89a6d 100%);
+    border: 1px solid rgba(184, 154, 109, 0.6);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    color: #2c2418;
+    font-weight: 600;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #e8d7b8 0%, #dac099 100%);
+    box-shadow: 0 4px 12px rgba(218, 192, 153, 0.4), 0 2px 8px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+}
+
+section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.homepage-one {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    margin-top: 70px;
+    background-image: url(../assets/img/downloads/131107152744-mona-lisa-1024x1536.jpg);
+    background-size: 100% auto;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    text-align: center;
+    background-color: #1a1a1a;
+}
+
+.homepage-one h3 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 1rem;
+    text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.8);
+    letter-spacing: 2px;
+    z-index: 1;
+}
+
+.homepage-one h2 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.95);
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+    letter-spacing: 3px;
+    z-index: 1;
+}
+
+/*Mao ni tung murag general style para sa section three  (basically section two pero mali ang naming ko)*/
+.homepage-three {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    min-height: 600px;
+    background: linear-gradient(135deg, 
+        rgba(26, 20, 16, 0.98) 0%, 
+        rgba(16, 12, 10, 0.99) 100%),
+        url(../assets/img/downloads/Aert-van-der-Neer-Night-Landscape-with-a-River-c.-1700.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 8%;
+}
+
+.homepage-three::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, 
+        rgba(61, 48, 42, 0.5) 0%, 
+        rgba(41, 32, 28, 0.6) 100%);
+    pointer-events: none;
+}
+
+.text-content {
+    display: flex;
+    flex-direction: column;
+    max-width: 700px;
+    z-index: 1;
+    justify-content: center;
+}
+
+.text-content h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #dac099;
+    text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.9),
+                 0 0 40px rgba(218, 192, 153, 0.5);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 0 0 15px 0;
+    line-height: 1.2;
+    z-index: 1;
+}
+
+.text-content h5 {
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #f5f1e8;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    letter-spacing: 0.5px;
+    margin: auto 0 0 0;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 25px 30px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border-right: 3px solid rgba(218, 192, 153, 0.5);
+    box-shadow: 0 0 40px rgba(218, 192, 153, 0.2),
+                0 8px 32px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 60px;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+
+.content-wrapper img {
+    width: auto;
+    max-width: 450px;
+    max-height: 550px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 15px;
+    box-shadow: 0 8px 40px rgba(218, 192, 153, 0.4),
+                0 4px 20px rgba(0, 0, 0, 0.4),
+                0 0 60px rgba(184, 154, 109, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid rgba(218, 192, 153, 0.2);
+    z-index: 1;
+    flex-shrink: 0;
+}
+
+.content-wrapper img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 50px rgba(218, 192, 153, 0.6),
+                0 6px 30px rgba(0, 0, 0, 0.5),
+                0 0 80px rgba(218, 192, 153, 0.5);
+}
+
+/*Mao ni para sa Section two*/
+.homepage-two {
+    position: relative;
+    width: 100%;
+    height: auto;
+    min-height: auto;
+    padding: 40px 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    overflow: hidden;
+}
+
+.section-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.artwork-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+    max-width: 1200px;
+    width: 100%;
+    padding: 20px;
+    margin: 20px 0 10px 0;
+    position: relative;
+    animation: fadeInUp 1s ease-out forwards;
+    opacity: 0;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px) scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.artwork-content:nth-child(2) {
+    align-self: flex-start;
+    animation-delay: 0.2s;
+}
+
+.artwork-content:nth-child(3) {
+    align-self: flex-end;
+    flex-direction: row-reverse;
+    animation-delay: 0.4s;
+}
+
+.artwork-content:nth-child(4) {
+    align-self: flex-start;
+    animation-delay: 0.6s;
+}
+
+.artwork-content:nth-child(3) h1 {
+    left: auto;
+    right: 0;
+}
+
+.artwork-content:nth-child(4) {
+    align-self: flex-start;
+}
+
+.artwork-image {
+    width: 400px;
+    height: auto;
+    border-radius: 10px;
+    flex-shrink: 0;
+    box-shadow: 0 8px 40px rgba(218, 192, 153, 0.4),
+                0 4px 20px rgba(0, 0, 0, 0.3),
+                0 0 60px rgba(184, 154, 109, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.homepage-four .artwork-image {
+    width: 100%;
+    max-width: 400px;
+    display: block;
+    object-fit: cover;
+}
+
+.artwork-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 50px rgba(218, 192, 153, 0.6),
+                0 6px 30px rgba(0, 0, 0, 0.4),
+                0 0 80px rgba(218, 192, 153, 0.5);
+}
+
+.homepage-four .artwork-content {
+    animation: fadeInUp 1s ease-out forwards;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin: 30px 0;
+    width: 100%;
+    max-width: 500px;
+}
+
+.homepage-four .artwork-content:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.homepage-four .artwork-content:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.homepage-four .artwork-content:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+.homepage-four .artwork-content:nth-child(5) {
+    animation-delay: 0.4s;
+}
+
+.homepage-four .artwork-content:nth-child(6) {
+    animation-delay: 0.5s;
+}
+
+.homepage-four .artwork-content a {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+}
+
+@media (max-width: 768px) {
+    .homepage-four {
+        grid-template-columns: 1fr;
+        padding: 40px 3%;
+        gap: 30px;
+    }
+    
+    .homepage-four .artwork-content {
+        max-width: 100%;
+    }
+    
+    .section-title {
+        font-size: 3rem;
+    }
+}
+
+
+.artwork-content h1 {
+    position: absolute;
+    top: -35px;
+    left: 0;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #dac099;
+    text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.9),
+                 0 0 30px rgba(218, 192, 153, 0.5);
+    letter-spacing: 2px;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.artwork-description {
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 1.8;
+    color: #f5f1e8;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    letter-spacing: 0.5px;
+    max-width: 600px;
+    margin: 0;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 25px;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    border-left: 3px solid rgba(218, 192, 153, 0.5);
+}
+
+.painting-name {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #dac099;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin: 0;
+    text-align: center;
+    width: 100%;
+    padding: 8px 12px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    border-top: 2px solid rgba(218, 192, 153, 0.4);
+}
+
+/* Mao ni naman toh para sa section four*/
+.homepage-four {
+    position: relative;
+    width: 100%;
+    height: auto;
+    min-height: auto;
+    background: linear-gradient(135deg, 
+        rgba(26, 20, 16, 0.98) 0%, 
+        rgba(16, 12, 10, 0.99) 100%),
+        url(../assets/img/downloads/Aert-van-der-Neer-Night-Landscape-with-a-River-c.-1700.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    padding: 60px 5%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    justify-items: center;
+    align-items: start;
+    gap: 40px;
+    overflow: hidden;
+}
+
+.homepage-four::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, 
+        rgba(77, 62, 55, 0.5) 0%, 
+        rgba(41, 32, 28, 0.6) 100%);
+    pointer-events: none;
+}
+
+.section-title {
+    font-size: 5rem;
+    font-weight: 700;
+    color: #dac099;
+    text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.9),
+                 0 0 40px rgba(218, 192, 153, 0.5);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    z-index: 1;
+    text-align: center;
+    grid-column: 1 / -1;
+    width: 100%;
+}
+
+/* Mao ni tung para sa zoom animation and syle */
+.zoom-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(20px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+    z-index: 9999;
+}
+
+.zoom-overlay:target {
+    opacity: 1;
+    visibility: visible;
+}
+
+.zoom-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+    text-align: center;
+    animation: zoomIn 0.4s ease;
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.7);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.zoom-content img {
+    max-width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+}
+
+.zoom-content p {
+    color: #dac099;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: 20px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+}
+
+.zoom-close {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    font-size: 4rem;
+    color: #dac099;
+    text-decoration: none;
+    line-height: 1;
+    transition: color 0.3s ease, transform 0.3s ease;
+    z-index: 10000;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+}
+
+.zoom-close:hover {
+    color: #fff;
+    transform: rotate(90deg);
+}
+
+/* Footer ni siya sa last na section */
+.homepage-five {
+    position: relative;
+    width: 100%;
+    min-height: 180px;
+    background: linear-gradient(135deg, 
+        rgba(45, 35, 28, 0.85) 0%, 
+        rgba(35, 27, 22, 0.88) 100%),
+        url(../assets/img/downloads/59229.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 8%;
+}
+
+.footer-content {
+    max-width: 1200px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footer-section h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #f5f1e8;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    border-bottom: 3px solid rgba(218, 192, 153, 0.4);
+    padding-bottom: 10px;
+}
+
+.footer-section p {
+    font-size: 1.1rem;
+    color: #e8e3d9;
+    line-height: 1.8;
+}
+
+.footer-section strong {
+    color: #dac099;
+    font-weight: 600;
+}
+
+.contact-info p {
+    margin: 8px 0;
+}
+
+.quote-section {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quote-section blockquote {
+    font-size: 1.3rem;
+    color: #f5f1e8;
+    line-height: 1.8;
+    font-style: italic;
+    margin: 0;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.2);
+    border-left: 4px solid rgba(218, 192, 153, 0.6);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.quote-section cite {
+    display: block;
+    margin-top: 15px;
+    font-size: 1rem;
+    color: #dac099;
+    font-style: normal;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.copyright {
+    text-align: center;
+    color: #c4b8a8;
+    font-size: 0.95rem;
+    margin-top: 20px;
+}
+
+/* Submit Section */
+.contact-section,
+.submit-section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(../assets/img/downloads/Aert-van-der-Neer-Night-Landscape-with-a-River-c.-1700.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 120px 8% 80px;
+}
+
+.contact-section::before,
+.submit-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg,
+        rgba(61, 48, 42, 0.5) 0%,
+        rgba(41, 32, 28, 0.6) 100%);
+    pointer-events: none;
+}
+
+.contact-card,
+.submit-card {
+    position: relative;
+    width: 100%;
+    max-width: 720px;
+    background: rgba(0, 0, 0, 0.35);
+    border-radius: 16px;
+    padding: 32px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6), 0 0 60px rgba(184, 154, 109, 0.25);
+    border: 1px solid rgba(218, 192, 153, 0.35);
+    backdrop-filter: blur(10px);
+}
+
+.contact-card h1,
+.submit-card h1 {
+    font-size: 2.4rem;
+    font-weight: 800;
+    color: #dac099;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0 0 10px 0;
+}
+
+.contact-card p.lead,
+.submit-card p.lead {
+    color: #e8e3d9;
+    text-align: center;
+    margin: 0 0 24px 0;
+}
+
+.contact-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px 24px;
+}
+
+.contact-form .full {
+    grid-column: 1 / -1;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    color: #dac099;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.form-control,
+.form-textarea {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(218, 192, 153, 0.35);
+    color: #f5f1e8;
+    border-radius: 10px;
+    padding: 12px 14px;
+    outline: none;
+    transition: box-shadow 0.2s ease, border-color 0.2s ease, transform 0.1s ease;
+}
+
+.form-textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+.form-control::placeholder,
+.form-textarea::placeholder {
+    color: rgba(245, 241, 232, 0.6);
+}
+
+.form-control:focus,
+.form-textarea:focus {
+    border-color: rgba(218, 192, 153, 0.8);
+    box-shadow: 0 0 0 3px rgba(218, 192, 153, 0.25), 0 10px 30px rgba(0, 0, 0, 0.4);
+    transform: translateY(-1px);
+}
+
+.form-actions {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+    margin-top: 8px;
+}
+
+.btn-primary {
+    padding: 12px 32px;
+    background: linear-gradient(135deg, #dac099 0%, #b89a6d 100%);
+    border: 1px solid rgba(218, 192, 153, 0.6);
+    border-radius: 10px;
+    cursor: pointer;
+    color: #2c2418;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 0.95rem;
+    box-shadow: 0 8px 28px rgba(218, 192, 153, 0.35), 0 6px 18px rgba(0, 0, 0, 0.45);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #e8d7b8 0%, #dac099 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 14px 32px rgba(218, 192, 153, 0.45), 0 10px 24px rgba(0, 0, 0, 0.45);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+.submit-card .back-link {
+    display: flex;
+    justify-content: center;
+    margin-top: 18px;
+}
+
+.submit-card .back-link a button {
+    padding: 10px 28px;
+    border-radius: 8px;
+}

@@ -1,0 +1,336 @@
+@font-face {
+    font-family: "Montserrat";
+    src: url(../fonts/Montserrat/Montserrat-VariableFont_wght.ttf) format('truetype');
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+
+}
+
+nav {
+    width: 100%;
+    padding: 10px 10%;
+    background: linear-gradient(
+        to bottom, 
+        rgba(139, 121, 94, 0.25) 0%,
+        rgba(101, 84, 75, 0.15) 100%
+    );
+    background-image: url(../assets/img/downloads/Aert-van-der-Neer-Night-Landscape-with-a-River-c.-1700.jpg);
+    backdrop-filter: blur(20px) saturate(180%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+nav::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, 
+        transparent 0%,
+        rgba(184, 154, 109, 0.15) 20%,
+        rgba(218, 192, 153, 0.25) 50%,
+        rgba(184, 154, 109, 0.15) 80%,
+        transparent 100%
+    );
+}
+
+li, a, #title {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    color: #f5f1e8;
+    text-decoration: none;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+#logo {
+    margin-inline-start: -10%;
+    cursor: pointer;
+    height: 20%;
+    width: 20%;
+    filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.5));
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+#logo:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.7));
+}
+
+.navigation_top {
+    list-style: none;
+}
+
+.navigation_top li {
+    display:inline-block;
+    padding: 0px 15px;
+}
+
+.navigation_top li a {
+    transition: all 0.3s ease 0s;
+    position: relative;
+    padding: 8px 20px;
+    border-radius: 4px;
+}
+
+.navigation_top li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, 
+        rgba(184, 154, 109, 0) 0%,
+        rgba(218, 192, 153, 1) 50%,
+        rgba(184, 154, 109, 0) 100%
+    );
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.navigation_top li a:hover {
+    color: #dac099;
+    text-shadow: 0 2px 8px rgba(218, 192, 153, 0.5);
+    background: rgba(218, 192, 153, 0.1);
+}
+
+.navigation_top li a:hover::after {
+    width: 80%;
+}
+
+button {
+    padding: 10px 32px;
+    background: linear-gradient(135deg, #dac099 0%, #b89a6d 100%);
+    border: 1px solid rgba(184, 154, 109, 0.6);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    color: #2c2418;
+    font-weight: 600;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #e8d7b8 0%, #dac099 100%);
+    box-shadow: 0 4px 12px rgba(218, 192, 153, 0.4), 0 2px 8px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+}
+
+section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.homepage-one {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    margin-top: 70px;
+    background-image: url(../assets/img/downloads/131107152744-mona-lisa-1024x1536.jpg);
+    background-size: 100% auto;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    text-align: center;
+    background-color: #1a1a1a;
+}
+
+.homepage-one h3 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 1rem;
+    text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.8);
+    letter-spacing: 2px;
+    z-index: 1;
+}
+
+.homepage-one h2 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.95);
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+    letter-spacing: 3px;
+    z-index: 1;
+}
+
+/* Fullscreen background image for contact page */
+body > img[alt="contact-background"] {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+    filter: brightness(0.45) saturate(0.95);
+}
+
+/* Contact section styling */
+.contact-section {
+    position: relative;
+    width: 100%;
+    min-height: 120vh;
+    margin-top: 80px;
+    padding: 80px 5% 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Section overlay for extra contrast */
+.contact-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(1200px 700px at 50% 15%, rgba(218, 192, 153, 0.08) 0%, rgba(0, 0, 0, 0.5) 60%, rgba(0,0,0,0.7) 100%);
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Glassy, transparent card with golden glow */
+.contact-card {
+    position: relative;
+    width: 100%;
+    max-width: 700px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(218, 192, 153, 0.35);
+    border-radius: 16px;
+    padding: 40px;
+    margin-top: 40px;
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.55),
+        0 0 80px rgba(218, 192, 153, 0.25),
+        inset 0 1px 2px rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(12px);
+    z-index: 1;
+}
+
+.contact-card h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #dac099;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0 0 12px 0;
+    text-shadow: 0 6px 30px rgba(0, 0, 0, 0.6), 0 0 50px rgba(218, 192, 153, 0.25);
+}
+
+.contact-card .lead {
+    color: #e8e3d9;
+    opacity: 0.9;
+    text-align: center;
+    margin: 0 0 32px 0;
+    font-size: 1.1rem;
+}
+
+/* Form layout */
+.contact-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px 24px;
+}
+
+.contact-form .full { grid-column: 1 / -1; }
+
+.form-group label {
+    color: #dac099;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.form-control,
+.form-textarea,
+.form-select {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(218, 192, 153, 0.35);
+    color: #f5f1e8;
+    border-radius: 10px;
+    padding: 12px 14px;
+    outline: none;
+    transition: box-shadow 0.2s ease, border-color 0.2s ease, transform 0.1s ease;
+}
+
+.form-control::placeholder,
+.form-textarea::placeholder { color: rgba(245, 241, 232, 0.6); }
+
+.form-textarea { min-height: 140px; resize: vertical; }
+
+.form-control:focus,
+.form-textarea:focus,
+.form-select:focus {
+    border-color: rgba(218, 192, 153, 0.85);
+    box-shadow:
+        0 0 0 3px rgba(218, 192, 153, 0.25),
+        0 16px 40px rgba(0, 0, 0, 0.55),
+        0 0 60px rgba(218, 192, 153, 0.25);
+    transform: translateY(-1px);
+}
+
+/* Custom dropdown arrow */
+.form-select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image:
+        linear-gradient(135deg, rgba(218,192,153,0.25) 0%, rgba(184,154,109,0.15) 100%),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23dac099' viewBox='0 0 24 24'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat, no-repeat;
+    background-position: left top, right 12px center;
+    background-size: auto, 18px 18px;
+}
+
+.form-select option {
+    background: #1a1510;
+    color: #f5f1e8;
+}
+
+.form-actions { grid-column: 1 / -1; display: flex; justify-content: center; }
+
+.btn-primary {
+    padding: 12px 32px;
+    background: linear-gradient(135deg, #dac099 0%, #b89a6d 100%);
+    border: 1px solid rgba(218, 192, 153, 0.6);
+    border-radius: 10px;
+    cursor: pointer;
+    color: #2c2418;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 0.95rem;
+    box-shadow: 0 8px 28px rgba(218, 192, 153, 0.35), 0 6px 18px rgba(0, 0, 0, 0.45);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #e8d7b8 0%, #dac099 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 14px 32px rgba(218, 192, 153, 0.45), 0 10px 24px rgba(0, 0, 0, 0.45);
+}
+
+.btn-primary:active { transform: translateY(0); }
+
+

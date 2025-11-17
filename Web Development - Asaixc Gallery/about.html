@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Asaixc Gallery - About</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="Ahmad Banaag">
+    <meta name="description" content="HTML, CSS, JavaScript, layout, extension, homepage">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap5/css/bootstrap.min.css">
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/about-styles.css">
+</head>
+<body>
+    <nav>
+        <img id="logo" src="assets/img/Asaixc galler.png" alt="logo">
+        <ul class="navigation_top">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+        <a class="contact" href="contact.html"><button>Contact Me</button></a>
+    </nav>
+    <div class="nav-space"></div>
+    <section class="about-section">
+        <div class="about-art-bg"></div>
+        <div class="about-card">
+            <h1 class="about-title">About the creator</h1>
+            <div class="about-divider"><span class="gold-glow"></span></div>
+            <p class="about-desc">I’m Ahmad Namion Banaag, an 18-year-old student and a passionate admirer of timeless Philippines masterpieces. <br><br>Through Asaixc Gallery, I want to share my journey as a student of the University of Southern Mindanao, and my enduring fascination with classical art.<br><br><span class="about-quote-text">Each classical painting holds a story woven into brushstrokes, beauty and history united, reaching across centuries. <b style='color:#dac099;'>Art is not just seen, but felt</b>: a shared culture, a living inspiration that connects us all. <br><br>Welcome, and may you discover wonder and meaning within these galleries.</span></p>
+        </div>
+    </section>
+    <section class="about-two">
+        <div class="video-pair">
+            <div class="video-wrapper">
+                <a href="#zoom-video-1">
+                  <video autoplay loop muted>
+                      <source src="video/Van Gogh's paintings brought to life using 3D animation and visual mapping.mp4" type="video/mp4">
+                  </video>
+                </a>
+                <div class="video-caption">Van Gogh's paintings: 3D Model Animation</div>
+            </div>
+            <div class="video-wrapper">
+                <a href="#zoom-video-2">
+                  <video autoplay loop muted>
+                      <source src="video/Starry Night_ 3D Model of a Painting by Vincent Van Gogh.mp4" type="video/mp4">
+                  </video>
+                </a>
+                <div class="video-caption">Starry Night: 3D Model Animation</div>
+            </div>
+        </div>
+        <div class="about-three">
+            <h2 class="about-quote">Preserving and celebrating the timeless beauty of classical art for a modern audience.</h2>
+        </div>
+    </section>
+    <div id="zoom-video-1" class="zoom-overlay">
+      <div class="zoom-content">
+        <a href="#" class="zoom-close">&times;</a>
+        <video controls autoplay loop muted>
+          <source src="video/Van Gogh's paintings brought to life using 3D animation and visual mapping.mp4" type="video/mp4">
+        </video>
+        <p>Van Gogh's paintings in motion</p>
+      </div>
+    </div>
+    <div id="zoom-video-2" class="zoom-overlay">
+      <div class="zoom-content">
+        <a href="#" class="zoom-close">&times;</a>
+        <video controls autoplay loop muted>
+          <source src="video/Starry Night_ 3D Model of a Painting by Vincent Van Gogh.mp4" type="video/mp4">
+        </video>
+        <p>Starry Night: 3D Model Animation</p>
+      </div>
+    </div>
+    <script src="bootstrap5/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

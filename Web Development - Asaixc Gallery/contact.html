@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Asaixc Gallery - Contact us!</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="Ahmad Banaag">
+    <meta name="description" content="HTML, CSS, JavaScript, layout, extension, homepage">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap5/css/bootstrap.min.css">
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <link rel="stylesheet" href="styles/contact-style.css">
+</head>
+<body>
+    <img src="assets/img/downloads/classical-landscapethe-night-leonid-polotsky.jpg" alt="contact-background">
+    <nav>
+        <img id="logo" src="assets/img/Asaixc galler.png" alt="logo">
+        <ul class="navigation_top">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+        <a class="contact" href="contact.html"><button>Contact Me</button></a>
+    </nav>
+    <section class="contact-section">
+        <div class="contact-card">
+            <h1>Contact Me</h1>
+            <p class="lead">Have questions or suggestions? Contact me here!</p>
+            <form action="https://formsubmit.co/ahmadbanaag8@gmail.com" method="POST" />
+                <div class="form-group full">
+                    <label for="name">Full Name</label>
+                    <input class="form-control" id="name" name="name" type="text" placeholder="Enter your full name" required>
+                </div>
+                <div class="form-group full">
+                    <label for="email">Email Address</label>
+                    <input class="form-control" id="email" name="email" type="email" placeholder="name@example.com" required>
+                </div>
+                <div class="form-group full">
+                    <label for="subject">Subject</label>
+                    <select class="form-select" id="subject" name="subject" required>
+                        <option value="" selected disabled>Select a subject</option>
+                        <option>Feedback About the Website</option>
+                        <option>Suggestions for Improvement</option>
+                        <option>Report an Issue / Broken Page</option>
+                        <option>Painting Restoration Inquiry</option>
+                        <option>Event / Exhibition Invitation</option>
+                        <option>Website Support</option>
+                        <option>Others</option>
+                    </select>
+                </div>
+                <div class="form-group full">
+                    <label for="message">Message</label>
+                    <textarea class="form-textarea" id="message" name="message" placeholder="Write your message here..." required></textarea>
+                </div>
+                <div class="form-actions">
+                    <button class="btn-primary" type="submit">Send Message</button>
+                </div>
+            </form>
+        </div>
+    </section>
+    <script src="bootstrap5/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
