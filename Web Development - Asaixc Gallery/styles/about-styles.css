@@ -1,5 +1,5 @@
 body {
-    background-image: url('../assets/img/downloads/classical-landscapethe-night-leonid-polotsky.jpg');
+    background-image: url('../assets/img/downloads/2948045-john-atkinson-grimshaw-classic-art-moon-night-painting-artwork___abstract-wallpapers.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -7,7 +7,7 @@ body {
 }
 
 .nav-space {
-    height: 180px;
+    height: 10px;
 }
 
 .about-section {
@@ -16,22 +16,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 160px 0vw 45px 0vw;
+    padding: 160px 0vw 0px 0vw;
     z-index: 1;
     margin-bottom: 150px;
-}
-
-.about-art-bg {
-    position: absolute;
-    inset: 0;
-    background: url('../assets/img/downloads/131107152744-mona-lisa-1024x1536.jpg');
-    background-size: 70% auto;
-    background-repeat: no-repeat;
-    background-position: right 10% top 50%;
-    opacity: 0.15;
-    filter: grayscale(1) blur(2px) brightness(0.85);
-    z-index: 0;
-    pointer-events: none;
 }
 
 .about-card {

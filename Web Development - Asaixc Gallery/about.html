@@ -4,7 +4,8 @@
     <title>Asaixc Gallery - About</title>
     <meta charset="UTF-8">
     <meta name="author" content="Ahmad Banaag">
-    <meta name="description" content="HTML, CSS, JavaScript, layout, extension, homepage">
+    <meta name="description" content="About page - A digital museum showcasing the richness of Philippine history through its most iconic paintings, preserving heritage, celebrating artistry, and bringing timeless masterpieces to the modern viewer.">
+    <meta name="keywords" content="HTML, CSS, layout, extension, homepage, Gallery, Museum, Wonders, Philippine, historical, juan Luna, Amorsolo, artwork-content, artwork-description, artwork-image">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="bootstrap5/css/bootstrap.min.css">
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
@@ -12,14 +13,31 @@
     <link rel="stylesheet" href="styles/about-styles.css">
 </head>
 <body>
-    <nav>
-        <img id="logo" src="assets/img/Asaixc galler.png" alt="logo">
-        <ul class="navigation_top">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-        </ul>
-        <a class="contact" href="contact.html"><button>Contact Me</button></a>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img id="logo" src="assets/img/Asaixc galler.png" alt="logo">
+            </a>
+            <button class="navbar-toggler ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <!-- Mobile Contact sulod ng menu -->
+                    <li class="nav-item d-lg-none mt-2">
+                        <a class="nav-link p-0" href="contact.html"><button class="btn btn-primary">Contact Me</button></a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Desktop Contact on the right for bootstrap na  -->
+            <div class="d-none d-lg-block ms-lg-3">
+                <a class="nav-link p-0" href="contact.html"><button class="btn btn-primary">Contact Me</button></a>
+            </div>
+        </div>
     </nav>
     <div class="nav-space"></div>
     <section class="about-section">

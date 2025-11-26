@@ -4,7 +4,8 @@
     <title>Asaixc Gallery - Gallery</title>
     <meta charset="UTF-8">
     <meta name="author" content="Ahmad Banaag">
-    <meta name="description" content="Museum-style gallery showcasing classical Philippine paintings">
+    <meta name="description" content="Gallery page - A digital museum showcasing the richness of Philippine history through its most iconic paintings, preserving heritage, celebrating artistry, and bringing timeless masterpieces to the modern viewer.">
+    <meta name="keywords" content="HTML, CSS, layout, extension, homepage, Gallery, Museum, Wonders, Philippine, historical, juan Luna, Amorsolo, artwork-content, artwork-description, artwork-image">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="bootstrap5/css/bootstrap.min.css">
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
@@ -12,16 +13,31 @@
     <link rel="stylesheet" href="styles/gallery-styles.css">
 </head>
 <body class="gallery-page">
-    <nav>
-        <img id="logo" src="assets/img/Asaixc galler.png" alt="logo">
-        <ul class="navigation_top">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-        </ul>
-        <a class="contact" href="contact.html"><button>Contact Me</button></a>
+     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img id="logo" src="assets/img/Asaixc galler.png" alt="logo">
+            </a>
+            <button class="navbar-toggler ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <!-- Mobile Contact sulod ng menu -->
+                    <li class="nav-item d-lg-none mt-2">
+                        <a class="nav-link p-0" href="contact.html"><button class="btn btn-primary">Contact Me</button></a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Desktop Contact on the right for bootstrap na  -->
+            <div class="d-none d-lg-block ms-lg-3">
+                <a class="nav-link p-0" href="contact.html"><button class="btn btn-primary">Contact Me</button></a>
+            </div>
+        </div>
     </nav>
-
     <section class="museum-gallery">
         <div class="gallery-container">
             <div class="gallery-header">
@@ -110,7 +126,15 @@
                 <div class="modal-info">
                     <h2>Spoliarium</h2>
                     <p>Juan Luna</p>
-                    <p class="modal-description">A monumental masterpiece portraying fallen gladiators stripped of dignity. This powerful work mirrors the struggles of a nation yearning for freedom beneath the shadows of oppression. Luna's use of dramatic chiaroscuro and emotional intensity makes this one of the most significant works in Philippine art history.</p>
+                    <p class="modal-description">A monumental masterpiece portraying fallen gladiators stripped of dignity. 
+                        This powerful work mirrors the struggles of a nation yearning for freedom beneath the shadows of oppression. 
+                        Luna's use of dramatic chiaroscuro and emotional intensity makes this one of the most significant works in Philippine art history.
+                         <br><br>
+                         Painted in Madrid and awarded the Gold Medal at the Exposición Nacional de Bellas Artes, the work became a rallying point for Filipino reformists like Rizal, 
+                         who saw in it a powerful metaphor for the Filipino struggle. Today, it stands as one of the most iconic masterpieces of 
+                         Philippine art and is displayed at the National Museum of Fine Arts. 
+                         <br><br> 
+                         - <strong>The Artistic Value of Juan Luna’s Spoliarium — Scientia (v12 i1) by Villareal, Morte & Paña</strong></p>
                 </div>
             </div>
         </div>
@@ -126,7 +150,14 @@
                 <div class="modal-info">
                     <h2>The Parisian Life</h2>
                     <p>Juan Luna</p>
-                    <p class="modal-description">A quiet yet unsettling glimpse into modernity and alienation. Beneath its café charm lies a reflection on identity, intimacy, and the silent distance between people in a changing world. This painting captures a moment of contemplation in late 19th-century Paris, revealing Luna's masterful observation of human nature.</p>
+                    <p class="modal-description">A quiet yet unsettling glimpse into modernity and alienation. 
+                        Beneath its café charm lies a reflection on identity, intimacy, and the silent distance between people in a changing world. 
+                        This painting captures a moment of contemplation in late 19th-century Paris, revealing Luna's masterful observation of human nature.
+                        <br><br>
+                        Exhibited at the 1904 St. Louis World’s Fair where it won a Silver Medal, the painting mixes casual modernity with hidden symbolism, 
+                        making it one of Luna’s most intriguing works from his Paris period.
+                        <br><br>
+                        - <strong>An art historical parallax: the subject, spectacle, and myth of/in Juan Luna’s “Parisian Life” — Pearlie Rose S. Baluyut, IIAS Newsletter.</strong></p>
                 </div>
             </div>
         </div>
@@ -142,7 +173,17 @@
                 <div class="modal-info">
                     <h2>La Laguna Estigia</h2>
                     <p>Felix Resurreccion Hidalgo</p>
-                    <p class="modal-description">A haunting voyage across the mythic River Styx. Hidalgo captures the fragility of the soul in transition, a poetic meditation on death, redemption, and the timeless passage between worlds. The painting's ethereal atmosphere and classical composition reflect Hidalgo's profound understanding of allegory and symbolism.</p>
+                    <p class="modal-description">A haunting voyage across the mythic River Styx. 
+                        Hidalgo captures the fragility of the soul in transition, a poetic meditation on death, 
+                        redemption, and the timeless passage between worlds. The painting's ethereal atmosphere 
+                        and classical composition reflect Hidalgo's profound understanding of allegory and symbolism.
+                    <br><br>
+                    Inspired by Greco-Roman imagery and Dante’s Inferno, the painting’s dramatic lighting and somber 
+                    tones reveal Hidalgo’s mastery of classical themes. Awarded a Silver Medal at the 1887 
+                    Exposición General de las Islas Filipinas, it stands as a testament to Filipino excellence 
+                    in the European academic art tradition.
+                <br><br>
+                - <strong>Wikipedia</strong></p>
                 </div>
             </div>
         </div>
@@ -158,7 +199,16 @@
                 <div class="modal-info">
                     <h2>First Mass at Limasawa</h2>
                     <p>Botong Francisco</p>
-                    <p class="modal-description">A significant historical painting depicting the first Catholic mass celebrated in the Philippines. Francisco captures this pivotal moment in Philippine history with vibrant colors and dynamic composition, celebrating the arrival of Christianity while honoring the rich cultural heritage of the Filipino people.</p>
+                    <p class="modal-description">A significant historical painting depicting the first Catholic mass celebrated in the Philippines. 
+                        Francisco captures this pivotal moment in Philippine history with vibrant colors and dynamic composition, 
+                        celebrating the arrival of Christianity while honoring the rich cultural heritage of the Filipino people.
+                    <br><br>
+                    The scene typically shows the celebrant priest, Magellan’s crew, and the local ruler Rajah Kolambu 
+                    gathered in solemn worship, marking the historic introduction of Christianity to the archipelago. 
+                    Despite long-standing debates about the exact location, Limasawa is officially recognized as the site 
+                    of this pivotal moment in Philippine history.
+                <br><br>
+                - <strong>Wikipedia</strong></p>
                 </div>
             </div>
         </div>
@@ -174,7 +224,17 @@
                     <div class="modal-info">
                         <h2>Planting Rice</h2>
                         <p>Fernando Amorsolo</p>
-                        <p class="modal-description">A quintessential representation of rural Filipino life, bathed in golden sunlight. Amorsolo's mastery of light and his idealization of pastoral scenes make this work a beloved icon of Philippine art. The painting celebrates the dignity of agricultural work and the beauty of the Philippine countryside.</p>
+                        <p class="modal-description">A quintessential representation of rural Filipino life, 
+                            bathed in golden sunlight. Amorsolo's mastery of light and his idealization of 
+                            pastoral scenes make this work a beloved icon of Philippine art. The painting 
+                            celebrates the dignity of agricultural work and the beauty of the Philippine countryside.
+                        <br><br>
+                    Using his signature backlighting technique, Amorsolo transforms a scene of labor into a 
+                    celebration of harmony, resilience, and agricultural abundance. The painting is one of his 
+                    most famous representations of the Filipino countryside and helped define the visual 
+                    identity of Philippine genre painting.
+                        <br><br>
+                        - <strong>Cultural Center of the Philippines’ Encyclopedia of Philippine Art entry by Reuben R. Cañete.</strong></p>
                     </div>
                 </div>
             </div>
@@ -190,7 +250,17 @@
                     <div class="modal-info">
                         <h2>Hymen, Oh Hymenee</h2>
                         <p>Juan Luna</p>
-                        <p class="modal-description">A poignant and enigmatic painting that captures the essence of love and the mysteries of the human heart. Luna's use of rich colors and dramatic lighting creates a sense of intimacy and mystery, inviting viewers to explore the depths of human emotion and the sacred bond of love.</p>
+                        <p class="modal-description">A poignant and enigmatic painting that captures the essence of 
+                            love and the mysteries of the human heart. Luna's use of rich colors and dramatic lighting 
+                            creates a sense of intimacy and mystery, inviting viewers to explore the depths of human 
+                            emotion and the sacred bond of love.
+                        <br><br>
+                    Painted during Luna’s honeymoon in Venice, the work is rich in classical detail and emotional intensity. 
+                    It won a Bronze Medal at the 1889 Exposition Universelle in Paris but vanished for more than a century 
+                    until its rediscovery in the 2010s—an event hailed as one of the most significant recoveries 
+                    in Philippine art history.
+                        <br><br>
+                        - <strong>Philstar article on its unveiling at Ayala Museum.</strong></p>
                     </div>
                 </div>
             </div>
