@@ -3,112 +3,194 @@ import java.io.File;
 import java.io.FileWriter;
 import java.util.Scanner;
 import javax.swing.JOptionPane;
+import java.time.LocalDate;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
+
+/* 	 NEED TO UPDATE
+ * - Fix price formula BUG
+ * - Fix list BUG
+ * */
 
 public class cs04Lab2 {
 	public static void main(String[] args) {
 		
 	try {
-	
+		
 		Scanner input = new Scanner(new File("C:\\Users\\Ahmad Banaag\\OneDrive\\Documents\\textFiles\\cs04Lab2Input.txt"));
 		FileWriter print = new FileWriter("C:\\\\Users\\\\Ahmad Banaag\\\\OneDrive\\\\Documents\\\\textFiles\\\\cs04Lab2Output.txt", true);
 		
-		String viewProd = "";
-		String prodPurchase = "";
+		String recOutput = "";
 		double prodTotal = 0;
 		double payment = 0;
 		double change = 0;
-		 	
-		String choice = "0";
+		int prodCode = 0;
+		
+		String choice = "";
 		
 		do {
 			
-			while (input.hasNext()) {
-				viewProd += "\n" + input.nextLine() + "\n=======================";
+			String viewProd = "";
+			// SEPARATE THE TWO SO THAT THE FIRST WILL JUST ADD A CODE WHILE THE OTHER WILL ADD THE ACTUAL PRODUCT DESCRIPTION
+			while (input.hasNextLine()) {
+				String skipLine = input.nextLine(); //TO BE USED TO READ THE LINE
+				prodCode++;
+				}
+			
+			input = new Scanner(new File("C:\\Users\\Ahmad Banaag\\OneDrive\\Documents\\textFiles\\cs04Lab2Input.txt"));
+			
+			while (input.hasNextLine()) {
+				viewProd += input.nextLine() + "\n=======================\n";
 			}
 			
 			choice = JOptionPane.showInputDialog(
 					null,
-					"[1] View Products\n[2] Buy Products \n[3] Print Receipt \n[4] Exit",
+					"[1] Add Product\n[2] View Products\n[3] Buy Products \n[4] Print Receipt \n[5] Exit",
 					"Rotin STORE",
 					1);
 			
 			if (choice.equals("1")) {
 				
+				String addProductName = JOptionPane.showInputDialog(
+						null,
+						"ENTER PRODUCT's NAME:",
+						"Rotin STORE",
+						1);
+				
+				double addProdPrice = Double.parseDouble(JOptionPane.showInputDialog(
+						null,
+						"HOW MUCH IS " +
+						addProductName.toUpperCase() +
+						"?",
+						"Rotin STORE",
+						1));
+				
+				FileWriter addPrice = new FileWriter("C:\\\\Users\\\\Ahmad Banaag\\\\OneDrive\\\\Documents\\\\textFiles\\\\cs04Lab2Prices.txt", true);
+				
+				addPrice.write((prodCode + 1) + " | " +  (int) addProdPrice + ".0\n");
+				addPrice.flush();
+				addPrice.close();
+				
+				String formatProduct = (prodCode + 1) + " | " + addProductName + " | " + addProdPrice + " php\n";
+				
+				FileWriter addProd = new FileWriter("C:\\Users\\Ahmad Banaag\\OneDrive\\Documents\\textFiles\\cs04Lab2Input.txt", true);
+				
+				addProd.write(formatProduct);
+				addProd.flush();
+				addProd.close();
+				
+				prodCode++;
+			} else if (choice.equals("2")) {
+				
 				JOptionPane.showMessageDialog(
 						null,
-						"LIST OF PRODUCTS" +
+						"LIST OF PRODUCTS: \nCODE | PRODUCT NAME | PRICE\n" +
 						viewProd,
 						"Rotin STORE",
 						1);
 				
-			} else if (choice.equals("2")) {
+			} else if (choice.equals("3")) {
 				
 				String buy = "";
-				int quantity01 = 0;
-				int quantity02 = 0;
-				int quantity03 = 0;
-				boolean isBuy01 = false;
-				boolean isBuy02 = false;
-				boolean isBuy03 = false;
-				String safeGuard = "";
-				String silKa = "";
-				String palmoLive = "";
+				String  line = "";
+				int prodQuantity = 0;
+				Double price = 0.0;
 				
 				do {
-					
+				
 				buy = JOptionPane.showInputDialog(
 						null,
-						"LIST OF THE PRODUCTS:\n" +
+						"LIST OF THE PRODUCTS:\nCODE | PRODUCT NAME | PRICE\n" +
 						viewProd + 
 						"\nEnter product code that your want to BUY:",
 						"Rotin STORE",
 						1);
 				
-				if (buy.equals("01")) {
-					prodTotal += 15;
-					quantity01++;
+				input = new Scanner(new File("C:\\Users\\Ahmad Banaag\\OneDrive\\Documents\\textFiles\\cs04Lab2Input.txt"));
+				// GET QUANTITY OF PURCHASE
+				
+				String prodFirstCode = "";
+				
+				while (input.hasNextLine()) {
 					
-					safeGuard = "01 | Safeguard | 15.00 php | " + quantity01;
+					if (buy.equals("")) {
+						break;
+					}
 					
-					isBuy01 = true;
+					line = input.nextLine();
 					
-				} else if (buy.equals("02")) {
-					prodTotal += 25;
-					quantity02++;
+					if(!line.isEmpty()) {
+						
+						prodFirstCode = String.valueOf(line.charAt(0));
+						System.out.println(prodFirstCode);
+						if (buy.equalsIgnoreCase(prodFirstCode)) {
+							prodQuantity = Integer.parseInt(JOptionPane.showInputDialog(
+								null,
+								"HOW MANY?",
+								"Rotin STORE",
+								1));
+							//PRICE FORMULA / BLOCK
+							Scanner prodPrices = new Scanner(new File("C:\\Users\\Ahmad Banaag\\OneDrive\\Documents\\textFiles\\cs04Lab2Prices.txt"));
+							// MULTIPLY QUANTITY TO PRICE
+							while (prodPrices.hasNext()) {
+								
+								if (buy.equals("")) {
+									break;
+								}
+								
+								String line1 = prodPrices.nextLine();	
+								
+								if (!line1.isEmpty()) {
+									
+									String prodPrice = String.valueOf(line1.charAt(0));
+									
+									if (buy.equals(prodPrice)) {
+										
+										price = Double.parseDouble(line1.substring(line1.indexOf("|") + 1).trim());
+										
+										price *= prodQuantity;
+										
+										prodTotal += price;
+										
+										prodPrices.close();
+										break;
+									}
+								}
+							} break;
+						} 
+					} 
+				}
+				
+				// OUTPUT FOR RECEIPT ORDER 
+				// FIX THIS OUTPUT
+				
+				input = new Scanner(new File("C:\\Users\\Ahmad Banaag\\OneDrive\\Documents\\textFiles\\cs04Lab2Input.txt"));
+				
+				while (input.hasNext()) {
 					
-					silKa = "02 | Silka | 25.00 php | " + quantity02;
+					String line2 = input.nextLine();
+					line2 = String.valueOf(line2.charAt(0));
 					
-					isBuy02 = true;
-					
-				} else if (buy.equals("03")) {
-					prodTotal += 10;
-					quantity03++;
-					
-					palmoLive = "03 | Palmolive | 10.00 php | " + quantity03;
-					
-					isBuy03 = true;
-					
-				} else if (buy.equals("")) {
-					
-				} else {
+						if (line2.equals(buy)) {
+							recOutput +=  line + " | " + prodQuantity + "\n";
+							System.out.println(recOutput);
+							break;
+						}								
+					}
+				
+				input.close();
+				
+				if (!buy.equals(prodFirstCode)) {
 					JOptionPane.showMessageDialog(
 							null,
 							"Product Code can't be found!",
 							"Rotin Store",
-							0);
-				
-				} } while (!buy.equals("")); 
-				
-				if (isBuy01) {
-					prodPurchase += safeGuard + "\n";
-				} if (isBuy02) {
-					prodPurchase += silKa + "\n";
-				} if (isBuy03) {
-					prodPurchase += palmoLive + "\n";
+							0);  
 				}
 				
-				do {
+				} while (!buy.equals("")); 
 				
+				do {
 				payment += Double.parseDouble(JOptionPane.showInputDialog(
 						null,
 						"Total Payment: " +
@@ -135,9 +217,15 @@ public class cs04Lab2 {
 					
 				} } while (payment < prodTotal);
 				
-			} else if (choice.equals("3")) {
+			} else if (choice.equals("4")) {
 				
-				print.write("\n=========================\n" + "\nSTORE NAME: ROTIN STORE\nDATE: 1/29/2026\nTIME: 3:30\nCODE | PRODUCT NAME | PRICE | QUANTITY\n" + prodPurchase + "\nTOTAL PURCHASE: " + prodTotal + " php\nAMOUNT TENDERED: " + payment + " php\nCHANGE: " + change + " php\n\n=========================");
+				LocalDate date = LocalDate.now();
+				LocalTime time = LocalTime.now();
+				
+				DateTimeFormatter formatTime = DateTimeFormatter.ofPattern("HH:mm:ss");
+				String newTime = time.format(formatTime);
+				
+				print.write("\n=========================\n" + "\nSTORE NAME: ROTIN STORE\nDATE: " + date + "\nTIME: " + newTime + "\nCODE | PRODUCT NAME | PRICE | QUANTITY\n" + recOutput + "\nTOTAL PURCHASE: " + prodTotal + " php\nAMOUNT TENDERED: " + payment + " php\nCHANGE: " + change + " php\n\n=========================");
 				
 				JOptionPane.showMessageDialog(
 						null,
@@ -145,7 +233,7 @@ public class cs04Lab2 {
 						"Rotin STORE",
 						1);
 				
-			} else if (choice.equals("4")) {
+			} else if (choice.equals("5")) {
 				
 				JOptionPane.showMessageDialog(
 						null,
@@ -160,12 +248,12 @@ public class cs04Lab2 {
 						"ERROR!",
 						0);
 			}
-		} while (!choice.equals("4"));
+		} while (!choice.equals("5"));
 		
 		print.close();
 		input.close();
+		
 	}
-	
 	catch (Exception e) {
 		JOptionPane.showMessageDialog(
 				null,
