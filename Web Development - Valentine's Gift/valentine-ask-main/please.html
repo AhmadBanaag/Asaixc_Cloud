@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Valentine Letter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aldrich&family=Pixelify+Sans:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+    <style>
+      /* Music Toggle Button */
+      .music-btn {
+          position: fixed;
+          top: 20px;
+          right: 20px;
+          z-index: 1500;
+          background: rgba(255, 255, 255, 0.9);
+          border: 2px solid #ff4d6d;
+          border-radius: 50%;
+          width: 50px;
+          height: 50px;
+          font-size: 24px;
+          cursor: pointer;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          transition: all 0.3s ease;
+          box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      }
+
+      .music-btn:hover {
+          transform: scale(1.1) rotate(10deg);
+          background: white;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Background Audio -->
+    <audio id="bg-music" loop autoplay>
+        <source src="../audio/Bruno Major - The Most Beautiful Thing (Lyric & Chord Video).mp3" type="audio/mpeg">
+    </audio>
+    <button id="music-toggle" class="music-btn">🎵</button>
+
+    <!-- Floating Decorations -->
+    <div class="decorations-container">
+        <img src="../img/clouds/2.png" class="floating-cloud c1" alt="">
+        <img src="../img/clouds/2.png" class="floating-cloud c2" alt="">
+        <img src="../img/clouds/2.png" class="floating-cloud c3" alt="">
+        <div class="floating-heart h1"></div>
+        <div class="floating-heart h2"></div>
+        <div class="floating-heart h3"></div>
+        <div class="floating-heart h4"></div>
+        <img src="../img/sprites/mad_heart.png" class="sprite-char s1" alt="Cute Sprite">
+        <img src="../img/sprites/mad_heart.png" class="sprite-char s2" alt="Cute Sprite">
+        <img src="../img/sprites/yas_heart.png" class="sprite-char s3" alt="Cute Sprite">
+        <img src="../img/sprites/yas_wave.png" class="sprite-char s4" alt="Cute Sprite">
+    </div>
+
+    <!-- Envelope Screen -->
+    <div id="envelope-container">
+      <img src="envelope.png" alt="Envelope" id="envelope" />
+      <p>♡ Letter for You ♡</p>
+    </div>
+
+    <!-- Letter Screen -->
+    <div id="letter-container">
+      <div class="letter-window">
+        <h1 id="letter-title">Will you be my Valentine?</h1>
+
+        <img src="../img/sprites/mad_heart.png" class="cat" id="letter-cat" />
+
+        <div class="buttons" id="letter-buttons">
+          <img src="yes.png" class="btn yes-btn" alt="Yes" />
+
+          <div class="no-wrapper">
+            <img src="no.png" class="btn no-btn" alt="No" />
+          </div>
+        </div>
+
+        <p id="final-text" class="final-text" style="display: none">
+          <strong>Valentine Date:</strong> WATCH BRIDGERTON!!
+        </p>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
